@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      table,
+      tr,
+      td {
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>成功新增學生!!</h1>
+    <p>以下為成功新增的學生資料:</p>
+    <table>
+      <tr>
+        <td>學生ID</td>
+        <td><%= savedStudent._id %></td>
+      </tr>
+      <tr>
+        <td>名稱</td>
+        <td><%= savedStudent.name %></td>
+      </tr>
+      <tr>
+        <td>年齡</td>
+        <td><%= savedStudent.age %></td>
+      </tr>
+      <tr>
+        <td>merit獎學金</td>
+        <td><%= savedStudent.scholarship.merit %></td>
+      </tr>
+      <tr>
+        <td>other獎學金</td>
+        <td><%= savedStudent.scholarship.other %></td>
+      </tr>
+    </table>
+    <a href="/students">回到首頁</a>
+  </body>
+</html>
